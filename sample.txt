@@ -1,0 +1,104 @@
+Hello, file!
+
+
+
+3x^2
+
+{
+	"co": 3,
+	"ex": 2,
+	"meat": null,
+	"varType": "x"
+}
+
+3^2
+
+{
+	"co": 3,
+	"ex": 2,
+	"meat": null,
+	"varType": null
+}
+
+e
+
+{
+  "co": "e",
+  "ex": 1,
+  "meat": null,
+  "varType": False /*meaning no variable*/
+}
+
+
+(x+1)^2
+
+{
+  "co": 1,
+  "ex": 2,
+  "meat": [
+    {
+      "co": 1,
+      "ex": 1,
+      "meat": null,
+      "varType": True
+    },
+    {
+      "co": 1,
+      "ex": 1,
+      "meat": null,
+      "varType": False
+    }
+
+  ],
+  varType: False
+}
+
+
+x^2(x+1)
+
+{
+  "co": {
+    "co": 1,
+    "ex": 2,
+    "meat": null,
+    "varType": True
+  },
+  "ex": 1,
+  "meat": [
+    {
+      "co": 1,
+      "ex": 1,
+      "meat": null,
+      "varType": True
+    },
+    {
+      "co": 1,
+      "ex": 1,
+      "meat": null,
+      "varType": False
+    }
+
+  ],
+  varType: False
+}
+
+no ambiguity (consistency)
+no "can't express" polynomials (completeness)
+
+and effective axiomatization!!!(what does that even mean)
+
+var k = constructTerm(1)
+var h = constructTerm(1)
+var result = addition(k, h)
+
+check if varType matches, True
+check if ex matches, True
+return result with added co
+
+addition expectation:
+1+1 = 2
+1+x = 1+x
+x+x = 2x
+x^2 + x^2 = 2x^2
+(1+x) + (1+x) = 2(1+x)
+//that involves equals function
